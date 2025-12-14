@@ -1,15 +1,12 @@
 import mysql.connector
-
-mydb = mysql.connector.connect(
-    host = "localhost",
-    user = "root",
-    password = "12345678"
-)
-
-if mydb == True:
-    print("Database connected successfully!")
-else:
-    print("Invalid Connection!")
+try:
+    mydb = mysql.connector.connect(
+        host = "localhost",
+        user = "root",
+        password = "12345678"
+    )
+except mysql.connector.connect.Error:
+    print("invalid connection!")
 
 
 mycursor = mydb.cursor()
