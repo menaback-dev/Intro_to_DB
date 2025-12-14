@@ -5,7 +5,7 @@ try:
         user = "root",
         password = "12345678"
     )
-except mysql.connector.connect.Error:
+except mysql.connector.Error:
     print("invalid connection!")
 
 
